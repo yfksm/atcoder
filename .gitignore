@@ -1,2 +1,4 @@
 .clang-format
 .vscode
+script/config.py
+script/__pycache__
