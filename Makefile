@@ -21,8 +21,8 @@ ${PROGRAM}: ${PROGRAM}.cpp
 run:
 	${SCRIPT_DIR_PATH}/exec.sh 2> /dev/null
 
-custom_run:
-	./${PROGRAM} <${INPUT_FILE_PATH}> ${OUTPUT_FILE_PATH}
+crun:${PROGRAM}
+	./${PROGRAM} ${ARG}
 
 assert:
 	python3 ${SCRIPT_DIR_PATH}/assert_all.py
