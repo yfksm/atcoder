@@ -38,7 +38,7 @@ if result.status_code!=200:
     exit(0)
 
 load_url = CONTEST_URL + contest_name + "/tasks/" + contest_name + "_" + problem_name
-html = requests.get(load_url)
+html = session.get(load_url)
 soup = BeautifulSoup(html.content, "html.parser")
 
 sampleinput_elements = list(filter(lambda element: "Sample Input" in str(element), soup.select("section")))
